@@ -4,7 +4,6 @@ import Video from "./Video"
 
 const Videos = async () => {
   const videos = await getVideos()
-  console.log(videos)
   let content
   if (videos?.length == 0) {
     content = <h1>No video found </h1>
