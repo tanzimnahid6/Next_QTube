@@ -5,7 +5,7 @@ import { BsArrowDownShort } from "react-icons/bs"
 import { BiSolidLike, BiSolidDislike } from "react-icons/bi"
 
 const Description = ({ video }) => {
-  const { id, title, duration, author, views, date, thumbnail,like,dislike } = video
+  const { id, title, duration, author, views, date, thumbnail,like,dislike } = video || {}
   return (
     <div className="w-full border-2 border-gray-300 p-1 rounded h-28">
       <div>

@@ -18,7 +18,6 @@ const DBconnect = async () => {
         strict: true,
         deprecationErrors: true,
       },
-     
       
     })
     db = await client.db("QTube")
