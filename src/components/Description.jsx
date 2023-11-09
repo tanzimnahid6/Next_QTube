@@ -17,7 +17,7 @@ const Description = ({ video }) => {
             <ImYoutube size={30}></ImYoutube>
           </span>
           <div className="flex flex-col">
-            <span>Sample Music</span>
+            <span>{author}</span>
             <span className="text-xs font-mono">1M Subscribers</span>
           </div>
 

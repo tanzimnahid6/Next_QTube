@@ -5,9 +5,7 @@ import React from "react"
 
 const SingleVideos = async ({ params }) => {
   const id = params.slug
-  console.log(id);
   const video = await getSingleVideo(id)
-  // console.log(video);
   let content = null
   if (id) {
     content = (
