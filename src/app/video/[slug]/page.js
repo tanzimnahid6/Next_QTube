@@ -1,3 +1,4 @@
+import Description from "@/components/Description"
 import Player from "@/components/Player"
 import { getSingleVideo } from "@/util/getFun"
 import React from "react"
@@ -5,12 +6,13 @@ import React from "react"
 const SingleVideos = async ({ params }) => {
   const id = params.slug
   const video = await getSingleVideo(id)
+  console.log(video);
   let content = null
   if (id) {
     content = (
       <>
         <Player link={video.link} title={video.title} />
-        <h1>Description coming soon...</h1>
+        <Description video={video}></Description>
       </>
     )
   } else {

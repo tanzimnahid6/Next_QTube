@@ -1,81 +1,95 @@
 {
   "videos": [
     {
-      "id": 2,
-      "title": "vs Code Snippets - Boost your productivity with User Snippets",
+      "id": 1,
+      "title": "🔈BASS BOOSTED🔈 CAR MUSIC MIX 2018 🔥 BEST EDM, BOUNCE, ELECTRO HOUSE #3",
       "description": "আমরা যখন Visual Studio Code Editor এ কাজ করি তখন অহরহ ব্যবহৃত কোড ব্লক গুলো আমাদের কে বারবার টাইপ করতে হয় এবং সামগ্রিকভাবে চিন্তা করলে এরকম ছোট ছোট ম্যনুয়াল কাজ আমাদের productivity অনেকাংশেই কমিয়ে দেয়। VS Code এর বিল্ট ইন ইউজার স্নিপেট ফিচারের মাধ্যমে আমরা কমন কাজগুলো স্নিপেট আকারে সাজিয়ে রেখে দিতে পারি এবং শর্টকাট কমান্ডের মাধ্যমে বড় বড় কোড ব্লক গুলো নিয়ে আসতে পারি। এই ভিডিওতে আপনারা এটাই জানতে পারবেন যে কিভাবে আমরা Visual Studio Code Editor এ কাস্টম স্নিপেট লিখতে পারি।",
       "author": "Jubayer Nahid",
       "date": "January 24, 2023",
       "duration": "10:12",
+      "like":5,
+      "dislike":2,
       "views": "2.1k",
-      "link": "https://www.youtube-nocookie.com/embed/N-U6AVcIPy4",
-      "thumbnail": "https://i3.ytimg.com/vi/N-U6AVcIPy4/maxresdefault.jpg"
+      "link": "https://www.youtube.com/embed/ycBBygx299Q?si=RMn7AwgaB6HyRAvm",
+      "thumbnail": "https://i.ibb.co/bPsGFRy/e1.png"
     },
     {
-      "id": 4,
-      "title": "Deebounce Function in JavaScript - JavaScript Job Interview question",
+      "id": 2,
+      "title": "Falak Tak Chal Sath Mere || ( Slowed + Reverb )",
       "description": "In this video, I have explained about the debounce function in JavaScript. This is a common question interviewers ask at Job Interviews. If you watch this video carefully, you will understand what is debounce and how to handle it with custom debounce function.",
       "author": "Jubayer Nahid",
       "date": "January 24, 2023",
       "duration": "10:12",
       "views": "8.8k",
-      "link": "https://www.youtube-nocookie.com/embed/dD9O8DnIBj4",
-      "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg"
+      "like":5,
+      "dislike":2,
+      "link": "https://www.youtube.com/embed/jd90S8RePo4?si=wzMUlaHoDi25Q2lM",
+      "thumbnail": "https://i.ibb.co/D87wgQK/e2.png"
     },
     {
-      "id": 5,
-      "title": "SASS Tutorial in English - Overview of SASS",
+      "id": 3,
+      "title": "TUM JO AAYE _ ( Slowed + reverb ) ||Rahat Fateh Ali Khan ||Tulsi Kumar ||rm Lover Boy",
       "description": "Innnnna this video, I have given a high level overview of popular CSS Pre-processor SASS which helps us managing our styles at scale. If you have a basic understanding of CSS & JavaScript, this 10 mins SASS Tutorial will help you getting started with SASS.",
       "author": "Jubayer Nahid",
       "date": "January 26, 2022",
       "duration": "10:12",
       "views": "2.8k",
-      "link": "https://www.youtube-nocookie.com/embed/4tV1Mfi4fMA",
-      "thumbnail": "https://i3.ytimg.com/vi/4tV1Mfi4fMA/maxresdefault.jpg"
+      "like":5,
+      "dislike":2,
+      "link": "https://www.youtube.com/embed/mefLZSXLFaM?si=-uX_G_gavwwtHKkH",
+      "thumbnail": "https://i.ibb.co/PzcBf7S/e3.png"
     },
     {
-      "id": 6,
-      "title": "React Router DOM v6 Bangla Tutorial - Breaking Changes - React Router 6 vs 5",
+      "id": 4,
+      "title": "Coke Studio Bharat | Khalasi | Aditya Gadhvi x Achint",
       "description": "In this React Router DOM v6 Bangla tutorial, you will learn how to install react router dom 6, what are the breaking changes in react router 6, difference between react router 6 vs 5, how to upgrade from react router v5 to react router v6. ",
       "author": "Jubayer Nahid",
       "date": "March 24, 2023",
       "duration": "10:12",
       "views": "9.1k",
-      "link": "https://www.youtube-nocookie.com/embed/34tjWL9wi4g",
-      "thumbnail": "https://i3.ytimg.com/vi/34tjWL9wi4g/maxresdefault.jpg"
+      "like":5,
+      "dislike":2,
+      "link": "https://www.youtube.com/embed/t7wSjy9Lv-o?si=8IxYRj_UwZl9Qeh",
+      "thumbnail": "https://i.ibb.co/bQTbnPZ/lofi1.png"
     },
     {
-      "id": 7,
-      "title": "Tailwind CSS Tutorial Bangla - Introduction to Tailwind CSS",
+      "id": 5,
+      "title": "Murir Tin | Coke Studio Bangla | Season 2 | Riad X Pollob X Towfique",
       "description": "Tailwind is a utility-first CSS framework to rapidly build modern websites without ever leaving your HTML. In this Tailwind CSS tutorial, I have given a short introduction and overview of Tailwind CSS in Bangla language. Also, I have explained, why Tailwind vs Bootstrap debate should be stopped as both are useful in their own ways.",
       "author": "Jubayer Nahid",
       "date": "Oct 15, 2021",
       "duration": "10:12",
       "views": "5.1k",
-      "link": "https://www.youtube-nocookie.com/embed/smDa6hoxLKI",
-      "thumbnail": "https://i3.ytimg.com/vi/smDa6hoxLKI/maxresdefault.jpg"
+      "like":5,
+      "dislike":2,
+      "link": "https://www.youtube.com/embed/LQ3677p5NWg?si=UUcsmXpdyERGdmxM",
+      "thumbnail": "https://i.ibb.co/bQTbnPZ/lofi1.png"
     },
     {
-      "id": 8,
-      "title": "Tailwind CSS Tutorial Bangla - Introduction to Tailwind CSS",
+      "id": 6,
+      "title": "PS1 - Ponni Nadhi Live In Houston | AR Rahman | Mani Ratnam | Subaskaran | Ponniyin Selvan",
       "description": "Tailwind is a utility-first CSS framework to rapidly build modern websites without ever leaving your HTML. In this Tailwind CSS tutorial, I have given a short introduction and overview of Tailwind CSS in Bangla language. Also, I have explained, why Tailwind vs Bootstrap debate should be stopped as both are useful in their own ways.",
       "author": "Jubayer Nahid",
       "date": "January 24, 2023",
       "duration": "10:12",
       "views": "1.1k",
-      "link": "https://www.youtube-nocookie.com/embed/smDa6hoxLKI",
-      "thumbnail": "https://i3.ytimg.com/vi/smDa6hoxLKI/maxresdefault.jpg"
+      "like":5,
+      "dislike":2,
+      "link": "https://www.youtube.com/embed/wbYG8T80SOk?si=Fet5Igf6pDOjGD_r",
+      "thumbnail": "https://i.ibb.co/Yf7xS44/lofi2.png"
     },
     {
-      "id": 10,
-      "title": "Tailwind CSS Tutorial Bangla - Introduction to Tailwind CSS",
+      "id": 7,
+      "title": "ARASH feat Helena - ONE DAY (Official Video)",
       "description": "Tailwind is a utility-first CSS framework to rapidly build modern websites without ever leaving your HTML. In this Tailwind CSS tutorial, I have given a short introduction and overview of Tailwind CSS in Bangla language. Also, I have explained, why Tailwind vs Bootstrap debate should be stopped as both are useful in their own ways.",
       "author": "Jubayer Nahid",
       "date": "January 24, 2023",
       "duration": "10:12",
       "views": "2k",
-      "link": "https://www.youtube-nocookie.com/embed/smDa6hoxLKI",
-      "thumbnail": "https://i3.ytimg.com/vi/smDa6hoxLKI/maxresdefault.jpg"
+      "like":5,
+      "dislike":2,
+      "link": "https://www.youtube.com/embed/rjBsQ9SygnE?si=eEKIUBtDFBymxLMm",
+      "thumbnail": "https://i.ibb.co/cX9ZZGV/lofi3.png"
     }
     
   ]

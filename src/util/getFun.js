@@ -1,12 +1,26 @@
+import DBconnect from "@/services/DBconnect"
+
 export const getVideos = async () => {
-  const res = await fetch("http://localhost:3000/videos",{
-    cache:'no-cache'
+
+  const db = await DBconnect()
+  const videosCollection = await db.collection("videos")
+  const data = await videosCollection.find().toArray()
+  console.log('hello')
+
+
+
+
+  const res = await fetch("http://localhost:3002/api/videos", {
+    cache: "no-cache",
   })
   const videos = await res.json()
-  return videos
+  return data
 }
-export const getSingleVideo = async (id)=>{
-  const res = await fetch(`http://localhost:3000/videos/${id}`)
+
+export const getSingleVideo = async (id) => {
+  const res = await fetch(`http://localhost:3000/videos/${id}`, {
+    cache: "no-cache",
+  })
   const video = await res.json()
   return video
 }
