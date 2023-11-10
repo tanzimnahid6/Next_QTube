@@ -1,8 +1,7 @@
 import { MongoClient, ServerApiVersion } from "mongodb"
 
-let db
-// const { MongoClient, ServerApiVersion } = require('mongodb');
-// import { MongoClient, ServerApiVersion } from 'mongodb'
+let db;
+
 /**
  *
  * @type {import('mongodb').db}

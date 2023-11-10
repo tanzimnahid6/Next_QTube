@@ -8,7 +8,7 @@ const Videos = async () => {
   const videos = await getVideos()
   
   let content
-  if (videos?.length == 0) {
+  if (videos?.length === 0) {
     content = <h1>No video found </h1>
   }
   if (videos?.length > 0) {

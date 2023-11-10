@@ -17,7 +17,6 @@ export default function Video({ video }) {
                 alt='thumbnail  picture'
                 width={300}
                 height={300}
-             
             />
           </Link>
 

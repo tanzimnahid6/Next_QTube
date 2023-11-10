@@ -2,10 +2,11 @@ import DBconnect from "@/services/DBconnect"
 import { ObjectId } from "mongodb"
 import { NextResponse } from "next/server"
 
-//==========all videos get api ---->http://localhost:3000/api/videos
+//====================all videos get api ---->http://localhost:3000/api/videos
 
 //and single video get api using query ------
 //http://localhost:3000/api/videos?id=654c6a4189d8a41b90c6ca9f
+
 export const GET = async (req) => {
   const db = await DBconnect()
   const videosCollection = await db.collection("videos")
