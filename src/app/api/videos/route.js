@@ -21,7 +21,7 @@ export const GET = async (req) => {
   return NextResponse.json(data)
 }
 
-//new data post api -> http://localhost:3000/api/videos
+//add new data post api -> http://localhost:3000/api/videos
 export const POST = async (req) => {
   const db = await DBconnect()
   const videosCollection = await db.collection("videos")
