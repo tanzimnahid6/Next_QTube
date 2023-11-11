@@ -41,3 +41,44 @@ export const DELETE = async (req) => {
   return NextResponse.json(result)
 }
 
+//update single video===================
+export const PATCH = async (req) => {
+  const db = await DBconnect()
+  const videosCollection = await db.collection("videos")
+  const { searchParams } = new URL(req.url)
+  const updatedId = searchParams.get("id")
+  const body = await req.json()
+  const {
+    title,
+    duration,
+    author,
+    views,
+    date,
+    thumbnail,
+    like,
+    dislike,
+    description,
+    tag,
+    link,
+  } = body
+  const filter = { _id: new ObjectId(updatedId) }
+  const options = { upsert: true }
+  const updateDoc = {
+    $set: {
+      title: title,
+      duration: duration,
+      author: author,
+      views: views,
+      date: date,
+      thumbnail: thumbnail,
+      like: like,
+      dislike: dislike,
+      description: description,
+      tag: tag,
+      link: link,
+    },
+  }
+  const result = await videosCollection.updateOne(filter, updateDoc, options)
+
+  return NextResponse.json(result)
+}

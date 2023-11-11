@@ -1,9 +1,9 @@
 // components/VideoTable.js
 "use client"
+import Link from "next/link"
 import React from "react"
 
-const VideoTable = ({ video ,handDelete}) => {
-   
+const VideoTable = ({ video, handDelete }) => {
   return (
     <div className="overflow-x-auto text-xs text-black text-left">
       <table className="w-full bg-white border border-gray-500">
@@ -31,8 +31,22 @@ const VideoTable = ({ video ,handDelete}) => {
             <td className="py-2 px-4 border-b w-32">{video.dislike}</td>
             <td className="py-2 px-4 border-b w-32">{video.tag}</td>
             <td>
-              <span onClick={()=>handDelete(video._id)} className="btn btn-error btn-xs font-bold hover:scale-110 transition-transform">Delete</span>
-              <span className="btn btn-primary btn-xs font-bold hover:scale-110 transition-transform mx-2">Update</span>
+              <span
+                onClick={() => handDelete(video._id)}
+                className="btn btn-error btn-xs font-bold hover:scale-110 transition-transform"
+              >
+                Delete
+              </span>
+              <Link
+                href={{
+                  pathname: "/dashboard/editVideo",
+                  query: { id: video._id },
+                }}
+              >
+                <span className="btn btn-primary btn-xs font-bold hover:scale-110 transition-transform mx-2">
+                  Update
+                </span>
+              </Link>
             </td>
           </tr>
         </tbody>

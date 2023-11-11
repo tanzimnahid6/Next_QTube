@@ -22,12 +22,7 @@ const VideoForm = () => {
 
   const handleChange = (e) => {
     let { name, value } = e.target
-    if (name === "date") {
-      const obj = { date: value }
-      const dateObject = new Date(obj.date)
-      const options = { year: "numeric", month: "long", day: "numeric" }
-      const formattedDate = dateObject.toLocaleDateString("en-US", options)
-    }
+
     setFormData({
       ...formData,
       [name]: value,
@@ -44,6 +39,10 @@ const VideoForm = () => {
     const newObj = {
       ...formData,
       date: formattedDate,
+      like: Number(formData.like),
+      views: Number(formData.views),
+      duration: Number(formData.duration),
+      dislike: Number(formData.dislike),
     }
     const posted = await postVideo(newObj)
 

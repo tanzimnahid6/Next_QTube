@@ -1,22 +1,34 @@
-// "use client"
+"use client"
 import { getVideos } from "@/util/getFun"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Video from "./Video"
 
+
 // eslint-disable-next-line @next/next/no-async-client-component
-const Videos = async () => {
-  const videos = await getVideos()
-  
+const Videos = () => {
+  const [videos, setVideos] = useState([])
+
+  useEffect(() => {
+    const fetchVideos = async () => {
+      const data = await getVideos()
+      setVideos(data)
+    }
+    fetchVideos()
+  }, [])
+
   let content
   if (videos?.length === 0) {
-    content = <h1>No video found </h1>
+    content = (
+      <div className="text-center font-bold w-full b">
+        <h1>Loading...</h1>
+        <span className="loading loading-bars loading-lg"></span>
+      </div>
+    )
   }
   if (videos?.length > 0) {
-    content = videos.map((video) => (
-      <Video key={video.id} video={video}></Video>
-    ))
+    content = videos.map((video, i) => <Video key={i} video={video}></Video>)
   }
-  return <>{ content }</>
+  return <>{content}</>
 }
 
 export default Videos

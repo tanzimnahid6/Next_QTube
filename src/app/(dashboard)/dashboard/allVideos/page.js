@@ -8,6 +8,8 @@ import Swal from "sweetalert2"
 const AllVideos = () => {
   const [videos, setVideos] = useState([])
   const [count, setCount] = useState(1)
+
+  
   useEffect(() => {
     const fetchVideos = async () => {
       const data = await getVideos()
@@ -15,6 +17,8 @@ const AllVideos = () => {
     }
     fetchVideos()
   }, [count])
+
+
 
   const handDelete = async (id) => {
     const result = await deleteVideo(id)

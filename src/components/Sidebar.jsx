@@ -11,16 +11,12 @@ const Sidebar = () => {
       path: "/dashboard/addVideo",
     },
     {
-      title: "Edit Video",
-      path: "/dashboard/editVideo",
-    },
-    {
       title: "My Video",
       path: "/dashboard/myVideos",
     },
     {
       title: "All Video",
-      path: "/dashboard//allVideos",
+      path: "/dashboard/allVideos",
     },
   ]
   return (
