@@ -1,37 +1,62 @@
 "use client"
+import { postVideo } from "@/util/mutationFun"
 import React, { useState } from "react"
+import Swal from "sweetalert2"
 
 const VideoForm = () => {
   const initialFormData = {
-    title: "",
-    description: "",
-    author: "",
+    title: "This is test title",
+    description: "test description",
+    author: "Jubayer nahid",
     date: "",
     duration: 0,
     views: 0,
     like: 0,
     dislike: 0,
-    link: "",
-    thumbnail: "",
-    tag: "",
+    link: "https://www.youtube.com/embed/oGg3kzoR6lw?si=Axttmosm2wy7oiIm",
+    thumbnail: "https://i.ibb.co/cX9ZZGV/lofi3.png",
+    tag: "lofi",
   }
 
   const [formData, setFormData] = useState(initialFormData)
 
   const handleChange = (e) => {
     let { name, value } = e.target
-   
-    
+    if (name === "date") {
+      const obj = { date: value }
+      const dateObject = new Date(obj.date)
+      const options = { year: "numeric", month: "long", day: "numeric" }
+      const formattedDate = dateObject.toLocaleDateString("en-US", options)
+    }
     setFormData({
       ...formData,
       [name]: value,
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission logic here
-    console.log(formData)
+    const oldDate = formData.date
+    const dateObject = new Date(oldDate)
+    const options = { year: "numeric", month: "long", day: "numeric" }
+    const formattedDate = dateObject.toLocaleDateString("en-US", options)
+
+    const newObj = {
+      ...formData,
+      date: formattedDate,
+    }
+    const posted = await postVideo(newObj)
+
+    if (posted.acknowledged) {
+      Swal.fire({
+        position: "top",
+        icon: "success",
+        title: "Your video has been saved",
+        showConfirmButton: false,
+        timer: 1500,
+      })
+    }
+
     // Reset form data after submission
     setFormData(initialFormData)
   }
@@ -56,6 +81,7 @@ const VideoForm = () => {
                 onChange={handleChange}
                 className="w-full p-2 border rounded"
                 placeholder="Enter your title"
+                required
               />
             </div>
 
@@ -71,8 +97,9 @@ const VideoForm = () => {
                 name="description"
                 value={formData.description}
                 onChange={handleChange}
-                rows="4"
+                rows="2"
                 className="w-full p-2 border rounded"
+                required
               ></textarea>
             </div>
 
@@ -90,6 +117,7 @@ const VideoForm = () => {
                 value={formData.author}
                 onChange={handleChange}
                 className="w-full p-2 border rounded"
+                required
               />
             </div>
 
@@ -107,6 +135,7 @@ const VideoForm = () => {
                 value={formData.date}
                 onChange={handleChange}
                 className="w-full p-2 border rounded"
+                required
               />
             </div>
           </div>
@@ -127,6 +156,7 @@ const VideoForm = () => {
                   value={formData.duration}
                   onChange={handleChange}
                   className="w-24 p-2 border rounded"
+                  required
                 />
               </div>
 
@@ -144,6 +174,7 @@ const VideoForm = () => {
                   value={formData.views}
                   onChange={handleChange}
                   className="w-24 p-2 border rounded"
+                  required
                 />
               </div>
               <div>
@@ -160,6 +191,7 @@ const VideoForm = () => {
                   value={formData.like}
                   onChange={handleChange}
                   className="w-24 p-2 border rounded"
+                  required
                 />
               </div>
               <div>
@@ -176,6 +208,7 @@ const VideoForm = () => {
                   onChange={handleChange}
                   name="dislike"
                   className="w-full p-2 border rounded"
+                  required
                 />
               </div>
             </div>
@@ -194,9 +227,9 @@ const VideoForm = () => {
                 value={formData.tag}
                 onChange={handleChange}
                 className="w-full p-2 border rounded"
+                required
               />
             </div>
-
 
             <div>
               <label
@@ -212,6 +245,7 @@ const VideoForm = () => {
                 value={formData.link}
                 onChange={handleChange}
                 className="w-full p-2 border rounded"
+                required
               />
             </div>
             <div>
@@ -228,6 +262,7 @@ const VideoForm = () => {
                 value={formData.thumbnail}
                 onChange={handleChange}
                 className="w-full p-2 border rounded"
+                required
               />
             </div>
           </div>
