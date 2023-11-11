@@ -11,3 +11,10 @@ export const postVideo = async (video) => {
   const result = res.json()
   return result
 }
+export const deleteVideo = async (id) => {
+  const res = await fetch(`http://localhost:3000/api/videos?id=${id}`,{
+    method:"DELETE"
+  })
+  const result = await res.json()
+  return result
+}
