@@ -1,6 +1,6 @@
 export const postVideo = async (video) => {
   console.log(video)
-  const res = await fetch("http://localhost:3000/api/videos", {
+  const res = await fetch("/api/videos", {
     method: "POST",
     body: JSON.stringify(video),
     headers: {
@@ -12,7 +12,7 @@ export const postVideo = async (video) => {
   return result
 }
 export const deleteVideo = async (id) => {
-  const res = await fetch(`http://localhost:3000/api/videos?id=${id}`, {
+  const res = await fetch(`/api/videos?id=${id}`, {
     method: "DELETE",
   })
   const result = await res.json()
@@ -22,7 +22,7 @@ export const deleteVideo = async (id) => {
 export const updateVideo = async ({ id, newObj }) => {
   console.log(newObj)
 
-  const res = await fetch(`http://localhost:3000/api/videos?id=${id}`, {
+  const res = await fetch(`/api/videos?id=${id}`, {
     method: "PATCH",
     body: JSON.stringify(newObj),
     headers: {
