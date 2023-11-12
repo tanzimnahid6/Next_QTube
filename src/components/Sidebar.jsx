@@ -28,7 +28,7 @@ const Sidebar = () => {
           onClick={() => setIsOpen(!isOpen)}
           className="mt-1 hover:scale-110 transition-transform tooltip  tooltip-right"
         >
-          <TiDeleteOutline size={26}></TiDeleteOutline>
+          <TiDeleteOutline size={28}></TiDeleteOutline>
         </span>
       </div>
       <div className="mt-4">
