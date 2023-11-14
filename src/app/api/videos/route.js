@@ -79,6 +79,5 @@ export const PATCH = async (req) => {
     },
   }
   const result = await videosCollection.updateOne(filter, updateDoc, options)
-
   return NextResponse.json(result)
 }

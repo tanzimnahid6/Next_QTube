@@ -20,17 +20,25 @@ export const deleteVideo = async (id) => {
 }
 
 export const updateVideo = async ({ id, newObj }) => {
-  console.log(newObj)
-
   const res = await fetch(`/api/videos?id=${id}`, {
     method: "PATCH",
     body: JSON.stringify(newObj),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
-    cache:'no-cache'
+    cache: "no-cache",
   })
 
+  const result = await res.json()
+  return result
+}//TODO:still un used
+export const updateLike = async (id) => {
+  const res = await fetch(`/api/videos?id=${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
   const result = await res.json()
   return result
 }

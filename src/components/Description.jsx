@@ -1,11 +1,15 @@
-import React from "react";
-import { ImYoutube } from "react-icons/im";
-import { IoIosShareAlt } from "react-icons/io";
-import { BsArrowDownShort } from "react-icons/bs";
-import { BiSolidLike, BiSolidDislike } from "react-icons/bi";
+"use client"
+import React from "react"
+import { ImYoutube } from "react-icons/im"
+import { IoIosShareAlt } from "react-icons/io"
+import { BsArrowDownShort } from "react-icons/bs"
+import { BiSolidLike, BiSolidDislike } from "react-icons/bi"
 
 const Description = ({ video }) => {
-  const { title, author, like, dislike } = video || {};
+  const { title, author, like, dislike, _id } = video || {}
+  const handleLike = (id) => {
+    console.log(id)
+  }
 
   return (
     <div className="w-full border-2 border-gray-300 p-2 md:p-4 rounded mb-4">
@@ -24,7 +28,10 @@ const Description = ({ video }) => {
         </div>
         <div className="flex flex-col md:flex-row items-center gap-2">
           <div className="flex items-center gap-1">
-            <span className="cursor-pointer hover:scale-110 transition-transform">
+            <span
+              onClick={() => handleLike(_id)}
+              className="cursor-pointer hover:scale-110 transition-transform"
+            >
               <BiSolidLike size={24}></BiSolidLike>
             </span>
             <span>{like} | </span>
@@ -55,7 +62,7 @@ const Description = ({ video }) => {
         </span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Description;
+export default Description
